@@ -31,5 +31,15 @@ string substring(string s,int d,int h){
 string substring(string s,int d){
     return s.substr(d, s.length());
 }
-
+int IndexOf(string s, char c) {
+    for (int i=0; i<s.length(); i++){
+        if(s[i] == c){
+            return i;
+        }
+            
+       
+     
+    }
+     return -1;  
+}
 #endif

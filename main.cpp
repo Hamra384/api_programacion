@@ -3,9 +3,9 @@
 
 using namespace std;
 int main() {
-   string s = "Esto e";
-int p = indexOf(s,'e');
+   string s = "esto es una garcha";
+int p =  IndexOf(s,'e');
 cout << p << endl; // muestra: 5
-p = indexOf(s,'X');
+p = IndexOf(s,'X');
 cout << p << endl; // muestra: -1
 }
