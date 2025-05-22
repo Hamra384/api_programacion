@@ -31,7 +31,7 @@ string substring(string s,int d,int h){
 string substring(string s,int d){
     return s.substr(d, s.length());
 }
-int IndexOf(string s, char c) {
+int indexOf(string s, char c) {
     for (int i=0; i<s.length(); i++){
         if(s[i] == c){
             return i;
@@ -41,5 +41,81 @@ int IndexOf(string s, char c) {
      
     }
      return -1;  
+}
+int indexOf(string s,string toSearch){
+for (int i=0; i<=s.length()-toSearch.length(); i++){
+    int j = 0;
+    while(j<toSearch.length()&& s[i+j] == toSearch[j]){
+        j++;
+        if(j=toSearch.length()){
+            return i;
+        }
+    }
+
+        
+    
+       
+     
+    }
+     return -1;  
+}
+int indexOf(string s,char c,int offset){
+      for (int i=0; i<s.length()- offset; i++){
+        if(s[i+offset] == c){
+            return i+offset;
+        }
+            
+       
+     
+    }
+     return -1;  
+}
+
+int indexOf(string s,string toSearch,int offset){
+    for (int i=0; i<=s.length()-toSearch.length()-offset; i++){
+    int j = 0;
+    while(j<toSearch.length()&& s[i+j+offset] == toSearch[j]){
+        j++;
+        if(j=toSearch.length()){
+            return i+offset;
+        }
+    }
+
+        
+    
+       
+     
+    }
+     return -1;  
+}
+
+int lastIndexOf(string s, char c) {
+    for (int i = s.length() - 1; i >= 0; i--) {
+        if (s[i] == c) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+int indexOfN(string s,char c,int n){
+    if(n=0){
+        return -1;
+    }
+    int k= 0;
+    while (n<s.length()){
+n++;
+        if(s[n] == c){   
+           k++;
+           if(n>k){
+            k== s.length();
+           }
+            
+        }
+            
+       
+     
+    }
+     return k;
 }
 #endif

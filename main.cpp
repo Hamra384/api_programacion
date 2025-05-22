@@ -3,9 +3,11 @@
 
 using namespace std;
 int main() {
-   string s = "esto es una garcha";
-int p =  IndexOf(s,'e');
-cout << p << endl; // muestra: 5
-p = IndexOf(s,'X');
-cout << p << endl; // muestra: -1
+string s = "John|Paul|George|Ringo";
+int p = indexOfN(s,'|',1);
+cout << p << endl; // muestra: 4
+p = indexOfN(s,'|',2);
+cout << p << endl; // muestra: 9
+p = indexOfN(s,'|',3);
+cout << p << endl; // muestra: 16
 }
