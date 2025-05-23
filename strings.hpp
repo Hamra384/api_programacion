@@ -99,23 +99,83 @@ int lastIndexOf(string s, char c) {
 }
 
 int indexOfN(string s,char c,int n){
-    if(n=0){
+    if(n==0){
         return -1;
     }
     int k= 0;
-    while (n<s.length()){
-n++;
-        if(s[n] == c){   
+    int v = 0;
+    while (k<n){
+v++;
+        if(s[v] == c){   
            k++;
-           if(n>k){
-            k== s.length();
-           }
-            
         }
             
        
      
     }
-     return k;
+       if(n>k){
+            return s.length();
+           }
+     return v;
+}
+
+int charToInt(char c){
+    if (c >= '0' && c <= '9') {
+        return c - '0'; 
+    } if (c >= 'A' && c <= 'Z') {
+        return c - 'A' + 10; 
+    }
+    if (c >= 'a' && c <= 'z') {
+        return c - 'a' + 10; 
+    }
+    
+    else {
+        return -1; 
+    }
+}
+
+char intToChar(int i){
+    if(i>= 2 && i<= 9){
+        return i + '0';
+}
+    if (i >= 10 && i <= 35) {
+        return i + 'A' -10 ; 
+    }
+     else {
+        return -1; 
+    }
+}
+int getDigit(int n,int i){
+    string s = to_string(n);
+    int j = s.length();
+    int k = 0; 
+    char c;
+    while(k <= i){
+      j--;
+      k++;
+       
+    
+    }
+    c = s[j];
+    int b = charToInt(c);
+    return b;
+}
+
+string intToString(int i){
+    return to_string(i);
+    
+}
+
+int stringToInt(string s,int b){
+    int a = stoi(s);
+    int c = -1;
+    int d;
+    int i = 0;
+    while(c<s.length()){
+    c++;
+    int d = getDigit(a, i);
+    int e = 
+    i++;
+}
 }
 #endif
