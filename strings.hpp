@@ -165,17 +165,32 @@ string intToString(int i){
     return to_string(i);
     
 }
+int potencia(int n, int p){
+    int c = 0;
+    int i = n;
+    while(c<p-1){
+       c++;
+        n = i*n;
+    }
+    return n;
+}
+int stringToIntd(string){
 
+}
 int stringToInt(string s,int b){
-    int a = stoi(s);
-    int c = -1;
+    int c = 0;
     int d;
     int i = 0;
-    while(c<s.length()){
+    int res = 0;
+    int longitud = s.length();
+    while(c<longitud){
     c++;
-    int d = getDigit(a, i);
-    int e = 
+    char ca = s[longitud - 1- i];
+    int digit = charToInt(ca);
+    int e =digit* potencia(b, i);
+    res = res+e;
     i++;
 }
+return res;
 }
 #endif
