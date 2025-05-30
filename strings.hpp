@@ -193,4 +193,71 @@ int stringToInt(string s,int b){
 }
 return res;
 }
+string charToString(char c) {
+    return string(1, c);
+}
+char stringToChar(string s) {
+    return s[0];
+}
+string stringToString(string s) {
+    return s;
+}
+string doubleToString(double d){
+  return to_string(d);  
+}
+
+bool isEmpty(string s) {
+    return s == "";
+}
+
+bool startsWith(string s, string x) {
+    if (x.length() > s.length()) return false;
+    return s.substr(0, x.length()) == x;
+}
+
+bool endsWith(string s,string x){
+    if(x.length()> s.length()) return false;
+    return s.substr(s.length() - x.length()) == x;
+}
+
+bool contains(string s,char c){
+    int i = 0;
+    while(i<s.length()){
+    i++;
+    if(c==s[i]) return true;
+    }
+}
+
+string replace(string s,char oldChar,char newChar){
+    int i = 0;
+    while(i<s.length()){
+        if(oldChar == s[i]){
+            s[i] = newChar;
+        }
+        i++;
+    }
+    return s;
+}
+
+string insertAt(string s,int pos,char c){
+    s.resize(s.length()+1);
+    int i= s.length()-1;
+    while(i>pos){
+        s[i]= s[i-1];
+        i--;
+    }
+    s[pos] = c;
+    
+    return s;
+}
+
+string removeAt(string s,int pos){
+    int i = pos;
+    while(pos<s.length()){
+        s[pos]=s[pos+1];
+        pos++;
+    }
+    return s;
+}
 #endif
+//funcion stringtointd y stringtoint incompletas
