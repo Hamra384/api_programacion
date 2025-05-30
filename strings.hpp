@@ -259,5 +259,60 @@ string removeAt(string s,int pos){
     }
     return s;
 }
+
+string ltrim(string s){
+    while(s[0] == ' '){
+        s= removeAt(s, 0);
+}
+    return s;
+}
+
+string rtrim(string s){
+    int i = 1;
+    while(s[s.length()-i] == ' '){
+        s= removeAt(s,s.length()-i);
+        i++;
+    }
+    return s;
+}
+
+string trim(string s){
+    s=rtrim(s);
+    s=ltrim(s);
+    return s;
+}
+
+string replicate(char c,int n){
+    int i= 1;
+    string s = "";
+    while (i<n){
+        s=insertAt(s, 0, c);
+        i++;
+    }
+    return s;
+}
+
+string spaces(int n){
+    string s = replicate(' ', n);
+    return s;
+}
+
+string lpad(string s,int n,char c){
+    int i = 0;
+    while(i<n){
+        s= insertAt(s, 0, c);
+        i++;
+    }
+    return s;
+}
+
+string rpad(string s,int n,char c){
+      int i = 0;
+    while(i<n){
+        s= insertAt(s, s.length(), c);
+        i++;
+    }
+    return s;
+}
 #endif
 //funcion stringtointd y stringtoint incompletas

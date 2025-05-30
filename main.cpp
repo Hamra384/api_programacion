@@ -3,8 +3,9 @@
 
 using namespace std;
 int main() {
-string s = "Esto es una prueba";
-int pos = 7;
-string r = removeAt(s,pos);
-cout << r << endl; // SALIDA: Esto esuna prueba
+string s = "Hola";
+int n = 0;
+char c = 'X';
+string r = rpad(s,n,c);
+cout << "[" << r << "]" << endl; // muestra: [XXXXXXHola]
 }
