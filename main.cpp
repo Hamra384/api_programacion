@@ -3,13 +3,10 @@
 
 using namespace std;
 int main() {
-char c = '8';
-if( isLetter(c) )
+double x = 25.7;
+double y = 36.9;
+if( cmpDouble(x,y)<0 )
 {
-cout << c << " es letra" << endl; // SALIDA
-}
-c = 'x';
-if( !isLetter(c) )
-{cout << c << " NO es letra" << endl; // SALIDA
+cout << x << " es menor que: " << y << endl;
 }
 }

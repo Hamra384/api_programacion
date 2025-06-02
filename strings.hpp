@@ -145,6 +145,17 @@ char intToChar(int i){
         return -1; 
     }
 }
+char intToCharMin(int i){
+    if(i>= 2 && i<= 9){
+        return i + '0';
+}
+    if (i >= 10 && i <= 35) {
+        return i + 'a' -10 ; 
+    }
+     else {
+        return -1; 
+    }
+}
 int getDigit(int n,int i){
     string s = to_string(n);
     int j = s.length();
@@ -361,6 +372,76 @@ bool isUpperCase(char c){
     }
     else{
     return false;
+    }
+}
+
+bool isLowerCase(char c){
+     if(!isUpperCase(c)){
+       return true;
+    }
+    else{
+    return false;
+    }
+}
+
+char toUpperCase(char c){
+    int a = charToInt(c);
+    c = intToChar(a);
+    return c;
+}
+
+char toLowerCase(char c){
+    int a = charToInt(c);
+    c = intToCharMin(a);
+    return c;
+}
+
+string toUpperCase(string s){
+    int i = 0;
+    while(i<s.length()){
+        s[i]=toUpperCase(s[i]);
+        i++;
+    }
+    return s;
+}
+
+string toLowerCase(string s){
+    int i = 0;
+    while(i<s.length()){
+        s[i]=toLowerCase(s[i]);
+        i++;
+    }
+    return s;
+}
+
+int cmpString(string a,string b){
+    int i = 0;
+    int t;
+    if(a==b){
+        return 0;
+    }
+    while(a[i] == b[i]){
+        i++;
+    }
+    if(charToInt(a[i])<charToInt(b[i])){
+        t= -1;
+    }
+    else{
+        t = 1;
+    }
+    return t;
+}
+
+int cmpDouble(double a,double b){
+    int t;
+    if(a==b){
+        return 0;
+    }
+    if(a>b){
+        return 1;
+    }
+    else{
+        return-1;
     }
 }
 #endif
