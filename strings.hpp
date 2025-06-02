@@ -298,7 +298,7 @@ string spaces(int n){
 }
 
 string lpad(string s,int n,char c){
-    int i = 0;
+    int i = s.length();
     while(i<n){
         s= insertAt(s, 0, c);
         i++;
@@ -307,12 +307,61 @@ string lpad(string s,int n,char c){
 }
 
 string rpad(string s,int n,char c){
-      int i = 0;
+      int i = s.length();
     while(i<n){
         s= insertAt(s, s.length(), c);
         i++;
     }
     return s;
+}
+
+string cpad(string s,int n,char c){
+int i = 0;
+int j = (n-s.length())/2;
+if(n>s.length()){
+while(i<j){
+        s= insertAt(s, s.length(), c);    
+        i++;
+}
+i = 0;
+while(i<j){
+    s= insertAt(s, 0, c);    
+        i++;
+} }
+    return s;
+}
+
+bool isDigit(char c){
+    int a = charToInt(c);
+    if(a>9){
+        return false;
+    }
+    else{
+    return true;
+    }
+}
+
+bool isLetter(char c){
+    if(!isDigit(c)){
+       return true;
+    }
+    else{
+    return false;
+    }
+}
+
+int mierdini(char c){
+    int j = charToInt(c);
+    return j;
+}
+
+bool isUpperCase(char c){
+    if (c >= 'A' && c <= 'Z'){
+       return true;
+    }
+    else{
+    return false;
+    }
 }
 #endif
 //funcion stringtointd y stringtoint incompletas
