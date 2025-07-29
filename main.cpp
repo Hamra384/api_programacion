@@ -3,10 +3,14 @@
 
 using namespace std;
 int main() {
-double x = 25.7;
-double y = 36.9;
-if( cmpDouble(x,y)<0 )
-{
-cout << x << " es menor que: " << y << endl;
-}
+string s = "10";
+int i = stringToInt(s,10);
+cout << i << endl; // muestra: 10
+i = stringToInt(s,2);
+cout << i << endl; // muestra: 2
+i = stringToInt(s,16);
+cout << i << endl; // muestra: 16
+s = "16";
+i = stringToInt(s,12);
+cout << i << endl; // muestra: 4779
 }

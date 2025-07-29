@@ -189,20 +189,15 @@ int stringToIntd(string){
 
 }
 int stringToInt(string s,int b){
-    int c = 0;
-    int d;
-    int i = 0;
-    int res = 0;
-    int longitud = s.length();
-    while(c<longitud){
-    c++;
-    char ca = s[longitud - 1- i];
-    int digit = charToInt(ca);
-    int e =digit* potencia(b, i);
-    res = res+e;
+int sum = 0;
+int i = 0;
+int k = s.length();
+while(i<s.length()-1){
+    sum = sum + charToInt(s[i])*potencia(b, k);
+    k--;
     i++;
 }
-return res;
+return sum;
 }
 string charToString(char c) {
     return string(1, c);
@@ -359,11 +354,6 @@ bool isLetter(char c){
     else{
     return false;
     }
-}
-
-int mierdini(char c){
-    int j = charToInt(c);
-    return j;
 }
 
 bool isUpperCase(char c){
